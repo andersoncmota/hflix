@@ -1,38 +1,23 @@
 import React, { useState } from 'react'
-import {
-  EyeOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from '@ant-design/icons'
-import { Card, Typography, Layout, Menu, Button } from 'antd'
+import { EyeOutlined } from '@ant-design/icons'
+import { Card, Typography, Layout, Button } from 'antd'
 import Link from 'next/link'
 import HeaderComponent from '../../components/Header'
 import Image from 'next/image'
 
-const { Header, Sider, Content } = Layout
+const { Content } = Layout
 const { Meta } = Card
-const { Title, Text } = Typography
+const { Title } = Typography
 
 interface Props {
   categories: any
   animes?: any
 }
 
-export default function Home({ categories, animes = [] }: Props) {
+export default function Home({ animes = [] }: Props) {
   const [animesList, setAnimesList] = useState(animes)
 
   const searchAnimes = (value: string) => {
-    console.log(
-      value,
-      animes.filter((anime: any) =>
-        anime.attributes.canonicalTitle
-          .toLowerCase()
-          .includes(value.toLowerCase()),
-      ),
-    )
     setAnimesList(
       animes.filter((anime: any) =>
         anime.attributes.canonicalTitle
@@ -41,7 +26,7 @@ export default function Home({ categories, animes = [] }: Props) {
       ),
     )
   }
-  console.log('PROPPPPPPSSSSSS', animes)
+
   return (
     <Layout>
       <HeaderComponent onSearchChange={(value) => searchAnimes(value)} />
@@ -54,11 +39,15 @@ export default function Home({ categories, animes = [] }: Props) {
         >
           {animes.length && (
             <div>
-              <Title level={2}>Middle School</Title>
+              <Title level={2}>Tudo sobre Animes</Title>
 
               <div className="gridItems">
                 {animesList.map((anime) => (
-                  <Link key={anime.id} href={`/item/${anime.slug}`} passHref>
+                  <Link
+                    key={anime.id}
+                    href={`/anime/${anime.attributes.slug}`}
+                    passHref
+                  >
                     <a>
                       <Card
                         hoverable
@@ -104,25 +93,13 @@ export default function Home({ categories, animes = [] }: Props) {
 }
 
 export const getServerSideProps = async (context: any) => {
-  const { condicao } = context.query
+  const {} = context.query
 
   const animeResp = await fetch('https://kitsu.io/api/edge/anime')
   const anime = await animeResp.json()
 
-  const categoriesResp = await fetch('https://kitsu.io/api/edge/categories')
-  const categories = await categoriesResp.json()
-
-  const categoriesFormatted = categories.data.map((category: any) => {
-    return {
-      key: category.id,
-      label: category.attributes.title,
-      slug: category.attributes.slug,
-    }
-  })
-
   return {
     props: {
-      categories: categoriesFormatted,
       animes: anime.data,
     },
   }
