@@ -7,7 +7,7 @@ import Image from 'next/image'
 
 const { Content } = Layout
 const { Meta } = Card
-const { Title } = Typography
+const { Title, Text } = Typography
 
 interface Props {
   categories: any
@@ -40,6 +40,8 @@ export default function Home({ animes = [] }: Props) {
           {animes.length && (
             <div>
               <Title level={2}>Tudo sobre Animes</Title>
+
+              {animesList.length == 0 && <Text>Nenhum anime encontrado.</Text>}
 
               <div className="gridItems">
                 {animesList.map((anime) => (
