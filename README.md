@@ -13,7 +13,7 @@ Acesse o projeto online pelo link: [https://hflix.vercel.app/](https://hflix.ver
 
 ## Como rodar local
 
-- Clonar o projeto deste repositório.
+- Clonar este repositório.
 
 - Primeiro instalar as libs com o comando:
 
