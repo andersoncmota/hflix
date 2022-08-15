@@ -1,6 +1,6 @@
 O H Flix é um catálogo online de animes. Através deste catálogo você consegue ter informações sobre seu anime preferido.
 
-Acesse: [https://hflix.vercel.app/](https://hflix.vercel.app/) e conheça o catalogo online.
+Acesse o projeto online pelo link: [https://hflix.vercel.app/](https://hflix.vercel.app/).
 
 ## Tecnologias utilizadas
 
@@ -11,7 +11,7 @@ Acesse: [https://hflix.vercel.app/](https://hflix.vercel.app/) e conheça o cata
 - [https://vercel.com](Vercel)
 - [https://kitsu.docs.apiary.io/](Kitsu)
 
-## Como rodar localmento o projeto
+## Como rodar local
 
 - Clonar o projeto deste repositório.
 
