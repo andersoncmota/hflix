@@ -4,12 +4,12 @@ Acesse: [https://hflix.vercel.app/](https://hflix.vercel.app/) e conheça o cata
 
 ## Tecnologias utilizadas
 
-- [https://reactjs.org/](React Js)
-- [https://nextjs.org/](Next Js)
-- [https://ant.design/](Ant Design)
-- [https://lesscss.org/](Less Css)
-- [https://vercel.com](Vercel Servidor)
-- [https://kitsu.docs.apiary.io/](Kitsu API)
+- [https://reactjs.org/](ReactJs)
+- [https://nextjs.org/](NextJs)
+- [https://ant.design/](AntDesign)
+- [https://lesscss.org/](LessCss)
+- [https://vercel.com](Vercel)
+- [https://kitsu.docs.apiary.io/](Kitsu)
 
 ## Como rodar localmento o projeto
 
