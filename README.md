@@ -6,10 +6,10 @@ Acesse: [https://hflix.vercel.app/](https://hflix.vercel.app/) e conheça o cata
 
 - [https://reactjs.org/](React Js)
 - [https://nextjs.org/](Next Js)
-- [https://ant.design/](Ant.Design)
+- [https://ant.design/](Ant Design)
 - [https://lesscss.org/](Less Css)
-- [https://vercel.com](Vercel 'servidor')
-- [https://kitsu.docs.apiary.io/](Kitsu 'API')
+- [https://vercel.com](Vercel Servidor)
+- [https://kitsu.docs.apiary.io/](Kitsu API)
 
 ## Como rodar localmento o projeto
 
